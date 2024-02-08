@@ -20,6 +20,7 @@ import ContactLists from "../pages/ContactLists/";
 import ContactListItems from "../pages/ContactListItems/";
 // import Companies from "../pages/Companies/";
 import QuickMessages from "../pages/QuickMessages/";
+import Kanban from "../pages/Kanban";
 import { AuthProvider } from "../context/Auth/AuthContext";
 import { TicketsContextProvider } from "../context/Tickets/TicketsContext";
 import { WhatsAppsProvider } from "../context/WhatsApp/WhatsAppsContext";
@@ -30,6 +31,7 @@ import CampaignsConfig from "../pages/CampaignsConfig";
 import CampaignReport from "../pages/CampaignReport";
 import Annoucements from "../pages/Annoucements";
 import Chat from "../pages/Chat";
+import ToDoList from "../pages/ToDoList/";
 import Subscription from "../pages/Subscription/";
 
 
@@ -74,6 +76,12 @@ const Routes = () => {
                 />
                 <Route
                   exact
+                  path="/todolist"
+                  component={ToDoList}
+                  isPrivate
+                  />
+                <Route
+                  exact
                   path="/schedules"
                   component={Schedules}
                   isPrivate
@@ -92,6 +100,12 @@ const Routes = () => {
                   exact
                   path="/settings"
                   component={SettingsCustom}
+                  isPrivate
+                />
+				        <Route 
+                  exact
+                  path="/kanban"
+                  component={Kanban}
                   isPrivate
                 />
                 <Route

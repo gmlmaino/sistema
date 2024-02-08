@@ -108,6 +108,11 @@ const messages = {
         form: {
           name: "Nome",
           default: "Padrão",
+          sendIdQueue: "Fila",
+          timeSendQueue: "Redirecionar para fila em X minutos",
+          queueRedirection:"Redirecionamento de Fila",
+          queueRedirectionDesc:"Selecione uma fila para os contatos que não possuem fila serem redirecionados",
+
         },
         buttons: {
           okAdd: "Adicionar",
@@ -292,6 +297,8 @@ const messages = {
           "Nenhum atendimento encontrado com esse status ou termo pesquisado",
         buttons: {
           accept: "Aceitar",
+          closed: "Finalizar",
+          reopen: "Reabrir"
         },
       },
       newTicketModal: {

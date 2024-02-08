@@ -17,6 +17,8 @@ interface WhatsappData {
   ratingMessage?: string;
   queueIds?: number[];
   token?: string;
+  sendIdQueue?: number;
+  timeSendQueue?: number;
 }
 
 interface Request {
@@ -51,7 +53,9 @@ const UpdateWhatsAppService = async ({
     outOfHoursMessage,
     ratingMessage,
     queueIds = [],
-    token
+    token,
+    timeSendQueue,
+    sendIdQueue = null,
   } = whatsappData;
 
   try {
@@ -91,7 +95,9 @@ const UpdateWhatsAppService = async ({
     ratingMessage,
     isDefault,
     companyId,
-    token
+    token,
+    timeSendQueue,
+    sendIdQueue,
   });
 
   await AssociateWhatsappQueue(whatsapp, queueIds);
